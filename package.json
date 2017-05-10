@@ -1,0 +1,16 @@
+{
+  "name": "github-girl",
+  "version": "0.0.1",
+  "description": "每天定时帮您在github上打卡签到的妹子",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mikuscallion@icloud.com",
+  "license": "ISC",
+  "dependencies": {
+    "eventproxy": "^0.3.4",
+    "node-schedule": "^1.1.0",
+    "shelljs": "^0.6.0"
+  }
+}
