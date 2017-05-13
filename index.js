@@ -26,7 +26,7 @@ function ggJob(){
     var inputText = new Date();
     var inputText = moment(inputText).format('YYYY-MM-DD hh-mm-ss');
     var inputText = '本次提交时间：'+inputText +'\n\n';
-
+    console.log(inputText);
     fs.appendFile('README.md', inputText,  function(err) {
        if (err) {
           return console.error(err);
