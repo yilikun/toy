@@ -2,7 +2,7 @@ var fs = require("fs")
 var shell = require("shelljs");
 var schedule = require('node-schedule');
 var eventproxy = require('eventproxy');
-
+var moment = require('moment');
 var doJobTime = 0;
 
 ggSay('你好，我是你的guthub助手~~');
@@ -24,7 +24,8 @@ function ggJob(){
 
     /**/
     var inputText = new Date();
-        inputText = '本次提交时间：'+inputText +'\n\n';
+    var inputText = moment(inputText).format('YYYY-MM-DD hh-mm-ss');
+    var inputText = '本次提交时间：'+inputText +'\n\n';
 
     fs.appendFile('README.md', inputText,  function(err) {
        if (err) {
@@ -41,7 +42,7 @@ function ggJob(){
        shell.exec('git push origin master');
        doJobTime++;
        ggSay("助手已经提交了"+doJobTime+" 次");
-       ggSay('助手即将按计划执行');
+       ggSay('请不要关闭，助手即将按计划执行');
     });
 }
 
