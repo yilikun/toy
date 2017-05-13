@@ -5,13 +5,13 @@ var eventproxy = require('eventproxy');
 
 var doJobTime = 0;
 
-ggSay('Hello, I am Github Girl! ');
-ggSay('GG will do a job after 10s. The default job is do one commit to github. ');
+ggSay('你好，我是你的guthub助手~~');
+ggSay('我会在3s后工作. 默认向github提交一个commit. ');
 
 //first do
 setTimeout(function(){
     ggJob();
-},10*1000);
+},3*1000);
 
 //schedule
 //每天23点
