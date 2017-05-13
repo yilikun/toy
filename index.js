@@ -20,11 +20,11 @@ var j = schedule.scheduleJob('30 23 * * *', function(){
 });
 
 function ggJob(){
-    ggSay('GG start do a job. ');
+    ggSay('开始执行');
 
     /**/
     var inputText = new Date();
-        inputText = 'GG signed on, '+inputText +'\n\n';
+        inputText = '本次提交时间：'+inputText +'\n\n';
 
     fs.appendFile('README.md', inputText,  function(err) {
        if (err) {
@@ -40,11 +40,11 @@ function ggJob(){
        shell.exec('git commit -m "README.md update"');
        shell.exec('git push origin master');
        doJobTime++;
-       ggSay("GG done a job, had do "+doJobTime+" time. ");
-       ggSay('GG wil do a job as schedule...');
+       ggSay("助手已经提交了"+doJobTime+" 次");
+       ggSay('助手即将按计划执行');
     });
 }
 
 function ggSay(str){
-    console.log("[GG:"+str+"]\n");
+    console.log("[git助手:"+str+"]\n");
 }
