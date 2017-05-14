@@ -10,7 +10,9 @@ ggSay('我会在3s后工作. 默认向github提交一个commit. ');
 
 //first do
 setTimeout(function(){
-    ggJob();
+    for(var i = 0;i<10;i++){
+        ggJob();
+    }
 },3*1000);
 
 //schedule
@@ -21,7 +23,6 @@ var j = schedule.scheduleJob('30 23 * * *', function(){
 
 function ggJob(){
     ggSay('开始执行');
-
     /**/
     var inputText = new Date();
     var inputText = moment(inputText).format('YYYY-MM-DD hh:mm:ss');
