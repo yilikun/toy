@@ -41,7 +41,7 @@ function ggJob(){
        shell.exec('git commit -m "README.md update"');
        shell.exec('git push origin master');
        doJobTime++;
-       ggSay("助手已经提交了"+doJobTime+" 次");
+       ggSay("助手已经成功提交了"+doJobTime+" 次");
        ggSay('请不要关闭，助手即将按计划执行');
     });
 }
