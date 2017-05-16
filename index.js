@@ -13,7 +13,7 @@ setTimeout(function(){
     for(var i = 0;i<10;i++){
         ggJob();
     }
-},60*1000);
+},3*1000);
 
 //schedule
 //每天23点
@@ -38,6 +38,7 @@ function ggJob(){
     /**/
 
     var ep = eventproxy.create('jobp1', function () {
+        shell.exec('git pull origin master');
        shell.exec('git add --all');
        shell.exec('git commit -m "README.md update"');
        shell.exec('git push origin master');
