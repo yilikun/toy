@@ -13,7 +13,7 @@ setTimeout(function(){
     for(var i = 0;i<10;i++){
         ggJob();
     }
-},3*1000);
+},10*1000);
 
 //schedule
 //每天23点
