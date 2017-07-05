@@ -10,10 +10,10 @@ ggSay('我会在3s后工作. 默认向github提交一个commit. ');
 
 //first do
 setTimeout(function(){
-    for(var i = 0;i<10;i++){
+    for(var i = 0;i<3;i++){
         ggJob();
     }
-},60*1000);
+},1000*3);
 
 //schedule
 //每天23点
