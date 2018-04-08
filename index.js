@@ -49,5 +49,5 @@ function ggJob(){
 }
 
 function ggSay(str){
-    console.log("[git助手:"+str+"]\n");
+    console.log(`[git助手：${str}]\n`);
 }
