@@ -9,7 +9,7 @@ ggSay('你好，我是你的guthub助手~~');
 ggSay('我会在3s后工作. 默认向github提交一个commit. ');
 
 //first do
-for(var i = 0;i<3;i++){
+for(var i = 0;i<10;i++){
     setTimeout(ggJob,1000*i);
 }
 
