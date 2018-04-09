@@ -9,17 +9,16 @@ ggSay('你好，我是你的guthub助手~~');
 ggSay('我会在3s后工作. 默认向github提交一个commit. ');
 
 //first do
-setTimeout(function(){
-    for(var i = 0;i<3;i++){
-        ggJob();
-    }
-},1000*3);
+for(var i = 0;i<3;i++){
+    setTimeout(ggJob,1000*i);
+}
+
 
 //schedule
 //每天23点
-var j = schedule.scheduleJob('30 23 * * *', function(){
-    ggJob();
-});
+// var j = schedule.scheduleJob('30 23 * * *', function(){
+//     ggJob();
+// });
 
 function ggJob(){
     ggSay('开始执行');
