@@ -9,8 +9,8 @@ ggSay('你好，我是你的guthub助手~~');
 ggSay('我会在3s后工作. 默认向github提交一个commit. ');
 
 //first do
-for(var i = 0;i<10;i++){
-    setTimeout(ggJob,1000*i);
+for (var i = 0; i < 10; i++) {
+  setTimeout(ggJob, 1000 * i);
 }
 
 
@@ -20,33 +20,33 @@ for(var i = 0;i<10;i++){
 //     ggJob();
 // });
 
-function ggJob(){
-    ggSay('开始执行');
-    /**/
-    var inputText = new Date();
-    var inputText = moment(inputText).format('YYYY-MM-DD hh:mm:ss');
-    var inputText = '本次提交时间：'+inputText +'\n\n';
-    console.log(inputText);
-    fs.appendFile('README.md', inputText,  function(err) {
-       if (err) {
-          return console.error(err);
-       }else{
-          ep.emit('jobp1');
-       }
-    });
-    /**/
+function ggJob() {
+  ggSay('开始执行');
+  /**/
+  var inputText = new Date();
+  var inputText = moment(inputText).format('YYYY-MM-DD hh:mm:ss');
+  var inputText = '本次提交时间：' + inputText + '\n\n';
+  console.log(inputText);
+  fs.appendFile('README.md', inputText, function (err) {
+    if (err) {
+      return console.error(err);
+    } else {
+      ep.emit('jobp1');
+    }
+  });
+  /**/
 
-    var ep = eventproxy.create('jobp1', function () {
-        shell.exec('git pull origin master');
-       shell.exec('git add --all');
-       shell.exec('git commit -m "README.md update"');
-       shell.exec('git push origin master');
-       doJobTime++;
-       ggSay("助手已经成功提交了"+doJobTime+" 次");
-       ggSay('请不要关闭，助手即将按计划执行');
-    });
+  var ep = eventproxy.create('jobp1', function () {
+    shell.exec('git pull origin master');
+    shell.exec('git add --all');
+    shell.exec('git commit -m "README.md update"');
+    shell.exec('git push origin master');
+    doJobTime++;
+    ggSay("助手已经成功提交了" + doJobTime + " 次");
+    ggSay('请不要关闭，助手即将按计划执行');
+  });
 }
 
-function ggSay(str){
-    console.log(`[git助手：${str}]\n`);
+function ggSay(str) {
+  console.log(`[git助手：${str}]\n`);
 }
