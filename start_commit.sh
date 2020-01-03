@@ -1,0 +1,1 @@
+node /root/host/toy/index.js
