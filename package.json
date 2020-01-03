@@ -1,12 +1,12 @@
 {
-  "name": "github-girl",
+  "name": "github-boy",
   "version": "0.0.1",
-  "description": "每天定时帮您在github上打卡签到的妹子",
+  "description": "每天定时帮您在github上打卡签到的boy",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "mikuscallion@icloud.com",
+  "author": "yilikun",
   "license": "ISC",
   "dependencies": {
     "eventproxy": "^0.3.4",
