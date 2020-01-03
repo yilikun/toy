@@ -13,7 +13,13 @@
 1. 最好要了解下github贡献纪录的规则，<https://help.github.com/articles/why-are-my-contributions-not-showing-up-on-my-profile/>
 2. 在index.js中，使用node-schedule来定时运行，默认每天23点运行一次任务
 3. 任务的内容是，向README.md中追加一个时间字符串，然后提交到github上
-
+4. 定时任务有时不是很健壮,可以使用crontab来代替
+在服务器执行`crontab -e`,可以增加定时任务,用vi编辑器就好
+```
+23 11 * * * /root/host/toy/start_commit.sh > /dev/null 2>&1 &
+35 18 * * * /root/host/toy/start_commit.sh > /dev/null 2>&1 &
+00 23 * * * /root/host/toy/start_commit.sh > /dev/null 2>&1 &
+```
 ## 签到纪录
 
 
