@@ -36,8 +36,10 @@ function ggJob() {
   /**/
 
   var ep = eventproxy.create('jobp1', function () {
-    if (shell.exec('git pull origin master').code !== 0) {
-      shell.echo('Error: git pull origin master');
+    shell.cd('/root/host/toy');
+    const gitPullResult = shell.exec('git pull origin master');
+    if (gitPullResult.code !== 0) {
+      console.log(JSON.stringify(gitPullResult));
       shell.exit(1);
     }
     if (shell.exec('git add --all').code !== 0) {
