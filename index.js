@@ -9,10 +9,10 @@ ggSay('你好，我是你的guthub助手~~');
 ggSay('我会在3s后工作. 默认向github提交一个commit. ');
 
 //first do
-for (var i = 0; i < 10; i++) {
-  setTimeout(ggJob, 1000 * i);
-}
-
+// for (var i = 0; i < 10; i++) {
+//   setTimeout(ggJob, 1000 * i);
+// }
+ggJob()
 
 //schedule
 //每天23点
@@ -43,7 +43,7 @@ function ggJob() {
     shell.exec('git push origin master');
     doJobTime++;
     ggSay("助手已经成功提交了" + doJobTime + " 次");
-    ggSay('请不要关闭，助手即将按计划执行');
+    // ggSay('请不要关闭，助手即将按计划执行');
   });
 }
 
